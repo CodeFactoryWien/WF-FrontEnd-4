@@ -1,4 +1,5 @@
 const LANG_COURSE_EXAMPLE = {
+  img: "img/js.png",
   name: "javascript",
   blurb: `The language of the web`,
   technologies: ["javascript", "node.js", "jquery", "typescript"],
@@ -9,14 +10,14 @@ const LANG_COURSE_EXAMPLE = {
     objects: 100% (4/Compressing objects: 100% (4/4), done.  Writing objects:
     100% (4/4), 868 bytes | 434.00 KiB/s, done.  Total 4 (delta 0), reused
     0 (delta 0) To github.com:CodeFactoryWien/WF-FrontEnd-4.git a57b460..a022ca5
-    master -> master
+    master -> master<br><br>
     Learn javascript and Enumerating objects: 5, done.  Counting objects: 100%
     (5/5), done.  Delta compression using up to 4 threads Compressing objects:
     25% (1/Compressing objects:  50% (2/Compressing objects:  75% (3/Compressing
     objects: 100% (4/Compressing objects: 100% (4/4), done.  Writing objects:
     100% (4/4), 868 bytes | 434.00 KiB/s, done.  Total 4 (delta 0), reused
     0 (delta 0) To github.com:CodeFactoryWien/WF-FrontEnd-4.git a57b460..a022ca5
-    master -> master
+    master -> master<br><br>
     Learn javascript and Enumerating objects: 5, done.  Counting objects: 100%
     (5/5), done.  Delta compression using up to 4 threads Compressing objects:
     25% (1/Compressing objects:  50% (2/Compressing objects:  75% (3/Compressing
@@ -24,14 +25,18 @@ const LANG_COURSE_EXAMPLE = {
     100% (4/4), 868 bytes | 434.00 KiB/s, done.  Total 4 (delta 0), reused
     0 (delta 0) To github.com:CodeFactoryWien/WF-FrontEnd-4.git a57b460..a022ca5
     master -> master`,
-  videoUrls: ["", "", ""],
-  courseSpaceInfo: `This course is based in our main headquarters.`,
+  videoUrls: ["https://www.youtube.com/embed/PkZNo7MFNFg", "https://www.youtube.com/embed/2pL28CcEijU"],
+  courseSpaceInfo: `This course is based in our main headquarters. It is very nice there.
+    <span class=strikethru>We have a coffee machine with hazelnut flavored coffee</span>we
+    have a nice little kitchen with all the necessary implements.`,
   teachers: [
     {
+      img: "img/face1.jpg",
       name: "Proggo E. Smartman",
       text: "Proggo has been programming since he was a little baby",
     },
     {
+      img: "img/face1.jpg",
       name: "Scriptappa McSupergreat",
       text: "Founding member of Microsoft, Apple, Google and Burger King. Likes cheeseburgers and perl poetry.",
     }
