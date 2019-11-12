@@ -1,0 +1,79 @@
+body {
+  background-color: rgba(160, 75, 75, 0.842);
+  font-family: 'Indie Flower', cursive;
+  width: 100vw;
+}
+
+header {
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.nav-link {
+  font-size: 1.3rem;
+  color: black;
+}
+
+.container {
+  background-color: white;
+  padding-bottom: 10rem;
+}
+
+.row {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.display {
+  margin-bottom: 2rem;
+}
+
+.display h5 {
+  font-size: 1.1rem;
+}
+
+.display p {
+  margin-bottom: 0.1rem;
+}
+
+.name {
+  justify-self: flex-start;
+}
+
+.image-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 30rem;
+}
+
+@media screen and (max-width: 768px) {
+  .image-box {
+    height: 20rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .image-box {
+    height: 0rem;
+  }
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel-box {
+  width: 80%;
+}
+
+.carousel-box .image {
+  height: 300px;
+}
+/*# sourceMappingURL=style.css.map */
