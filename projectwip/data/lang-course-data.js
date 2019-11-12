@@ -1,6 +1,7 @@
 const LANG_COURSE_DATA = [
   ////////////////////////////
   {
+    id: 1,
     img: "img/js.png",
     name: "javascript",
     blurb: `The language of the web`,
@@ -101,6 +102,7 @@ const LANG_COURSE_DATA = [
 
   //////////////////////
   {
+    id: 2,
     img: "img/haskell.png",
     name: "Haskell",
     blurb: `Haskell is very hard.`,
@@ -217,6 +219,7 @@ const LANG_COURSE_DATA = [
 
   ////////////////////////////////
   {
+    id: 3,
     img: "img/brainfuck.png",
     name: "brainfuck",
     blurb: `The only language that can &gt;&gt;&gt;--&lt;-&gt;:..&gt;[[]]&gt;&lt;&lt;&lt;&lt;&lt;`,
