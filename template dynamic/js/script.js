@@ -120,9 +120,9 @@ class Language{
             for(i=0;i<x.length;i++){
                 objs.push(new Language(x[i].img, x[i].name, x[i].blurb, x[i].technologies, x[i].text, x[i].videoUrls, x[i].teachers, x[i].news, x[i].offers, x[i].testimonials));
                 
-                $("#tabs").append(`<li class="nav-item"><a href="#tab-${x[i].id}" class="nav-link" role="tab" data-toggle="tab">${x[i].name}</a></li>`);
+                $("#tabs").append(`<a class="dropdown-item" href="#tab-${x[i].id}"role="tab" data-toggle="tab">${x[i].name}</a>`);
                 
-                $("#TabContent").append(`<div class="tab-pane fade" id="tab-${x[i].id}" role="tabpanel">
+                $("#TabContent").append(`<div class="tab-pane" id="tab-${x[i].id}" role="tabpanel">
                 <div class="row" id="row-${x[i].id}">${objs[i].display()}</div></div>`)
                 
                 
