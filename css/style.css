@@ -59,7 +59,8 @@ header {
     margin-right: auto;
     width: 100%;
     height: auto;
-    bottom: 0; left: 0;
+    bottom: 0;
+    left: 0;
 }
 
 
@@ -115,12 +116,17 @@ a {
     cursor: pointer
 }
 
+.tab-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
 
 /*------------------COURSE CONTENT---------------*/
 
-/* .course-bg {
-    background-color: #fff;
-} */
 .card-img {
     width: 30%;
     height: auto;
@@ -136,6 +142,6 @@ a {
 
 .button {
     position: absolute;
-    bottom: 70px;
+    bottom: 140px;
     right: 0;
 }

@@ -18,19 +18,18 @@ class Home {
     }
     display() {
         return `
-                <div class="row" id="home-row">
-                    <div class="col-12">
-                    <img src="${this.img}">
-                    </div>
+                        <div class="row" id="home-row">
+                            <div class="col-12">
+                            <img src="img/landing_narrow.jpg">
+                            </div>
                 </div>
-                `
+        `
     }
 }
 
-
 class News {
 
-    constructor(name, startdate, seats, seatstaken,shorttext,longtext,price) {
+    constructor(name, startdate, seats, seatstaken, shorttext, longtext, price) {
         this.name = name;
         this.startdate = startdate;
         this.seats = seats;
@@ -80,6 +79,8 @@ class News {
 }
 
 
+
+
 class Courses {
 
     constructor(img, name, blurb, technologies, text, videoUrls, courseSpaceInfo, teachers, news, offers, testimonials) {
@@ -97,9 +98,9 @@ class Courses {
 
     }
     display() {
-        return `
+            return `
 
-
+            <script>console.log("Hello")</script>
             <div class="course-bg container-fluid p-0">
             <div class=title>${this.name}<img src="img/${this.img}.png" id="${this.img}"></div>
             <div class=subtitle>
@@ -156,20 +157,33 @@ class Courses {
                 <div class=sub-headline>
                     offers you can't refuse..!
                 </div>
-                <div class=offers-box>
+                <hr>
+                <div class="offers-box row justify-center">
                     ${ this.offers.map(o => `
-                    <div class=offers-item>
-                        <div>${o.name}</div>
-                        <div>${o.price} EUR</div>
-                        <div>${o.hours} hours</div>
-                        <div>${o.text}</div>
+                    <div class="offers-item md-3 sm-6">
+                        <div class="o_model" id="button">${o.name}</div>
+                            <div id="slider">
+                            <div class="o_price">${o.price} EUR</div>
+                            <div class="o_hours">${o.hours} hours</div>
+                            <div class="o_text" >${o.text}</div>
+            <script>
+            $("#button").click(function () {
+                $("#slider").stop().slideToggle();
+            });
+            
+            $("#button").hover(function () {
+                $(this).stop().css({
+                    "cursor": "pointer"
+                })
+            });
+            </script>
                         <a href=http://codefactory.wien>
-                            <div class="sidebox signup-banner">
                                 Sign up now at codefactory.wien!
-                            </div>
+                                </div>
                         </a>
                     </div>` ).join(" ") }
                 </div>
+                <hr>
                 <div class=sub-headline>
                     What our students say
                 </div>
@@ -183,12 +197,19 @@ class Courses {
             </div>
         </div>
                 `
-    }
-}
+            }
+        }
+//-----------------------------------------------------------------------------------Drop Down
+// $("#button").click(function () {
+//     $("#slider").stop().slideToggle();
+// });
 
-// objs.push(new Home(landing.img));
-
-
+// $("#button").hover(function () {
+//     $(this).stop().css({
+//         "cursor": "pointer"
+//     })
+// });
+//-----------------------------------------------------------------------------------
 
 
 

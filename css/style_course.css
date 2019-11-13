@@ -1,0 +1,345 @@
+.course-bg {
+    background: rgb(206, 221, 227);
+    background: linear-gradient(90deg, rgba(206, 221, 227, 1) 2%, rgba(255, 255, 255, 1) 2%, rgba(164, 164, 164, 0.24693627450980393) 3%, rgba(255, 255, 255, 1) 100%);
+}
+
+.title {
+    width: 100%;
+    height: 10%;
+}
+
+.course-img {
+    position: absolute;
+    top: 0;
+    margin-top: 66px;
+    left: 380px;
+    width: 85px;
+    height: auto;
+}
+
+#haskell {
+    position: absolute;
+    top: 0;
+    margin-top: 71px;
+    left: 296px;
+    width: 84px;
+    height: auto;
+}
+
+#brainfuck {
+    position: absolute;
+    top: 0;
+    margin-top: 67px;
+    left: 380px;
+    width: 84px;
+    height: auto;
+}
+
+#js {
+    position: absolute;
+    top: 0;
+    margin-top: 67px;
+    left: 380px;
+    width: 84px;
+    height: auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p,
+pre {
+    text-align: justify;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.signup-banner {
+    width: 80%;
+    transition: 0.25s;
+}
+
+aside {
+    -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.75);
+    background-color: #FFF;
+    margin: 10px;
+}
+
+
+/*--------------BOOTSTRAP SIDEBAR---------------------*/
+
+.collapse navbar-collapse {
+    position: fixed;
+    left: 0;
+    top: 10%;
+    display: visible!important;
+}
+
+
+/*----------------------------------------------------*/
+
+.content_no_sidebar {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+pre {
+    border: 1px solid #222;
+    border-radius: 1em;
+    transition: 0.25s;
+}
+
+pre:hover {
+    -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.75);
+}
+
+.title {
+    font-size: 5rem;
+    height: 10rem;
+    margin: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 3px solid black;
+}
+
+.title img {
+    max-height: 100%;
+}
+
+.subtitle {
+    text-align: right;
+    margin-right: 5vw;
+    margin-left: 20vw;
+    margin-bottom: 2rem;
+    background: black;
+    color: #0f0;
+}
+
+.content-with-sidebar {
+    margin: 0 4rem;
+    text-align: justify;
+    display: grid;
+    grid-template-columns: 7fr minmax(200px, 3fr);
+    grid-gap: 2em;
+}
+
+.sidebar-content {
+    position: sticky;
+    top: 90px;
+}
+
+.sidebox {
+    margin: 1em;
+    margin-bottom: 5em;
+    padding: 1em;
+    box-shadow: 0 0 2px 2px #222;
+    position: relative;
+}
+
+.sidebox img {
+    max-width: 100%;
+}
+
+.signup-banner {
+    background: darkred;
+    color: white;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 1em;
+    font-style: italic;
+    text-decoration: underline;
+    border-radius: 6px;
+}
+
+.signup-banner:hover {
+    background: darkgreen;
+}
+
+.news-item {
+    margin-bottom: 1rem;
+}
+
+
+/* .news-item div:nth-child(1) {
+      
+    } */
+
+.teachers-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.box-title {
+    font-size: 1.5rem;
+    position: absolute;
+    top: -2.2rem;
+    left: 0;
+}
+
+.text {
+    line-height: 2rem;
+}
+
+.strikethru {
+    text-decoration: line-through;
+}
+
+.vidbox {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.vidbox * {
+    margin-bottom: 2rem;
+}
+
+.fullwidth-content {
+    margin-top: 3rem;
+    background: #cedde3;
+    padding: 2rem 0;
+    opacity: 1;
+}
+
+.sub-headline {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    font-variant: small-caps;
+    line-height: 5rem;
+}
+
+
+/*---------------------------BOX CONTENT----------------------*/
+
+
+/*Dy n Drop Down*/
+
+#button {
+    background: #06f;
+    color: white;
+    width: 300px;
+    padding: 10px;
+}
+
+#content {
+    display: none;
+    width: 300px;
+    color: #333;
+}
+
+.o_model {
+    cursor: pointer;
+    font-size: 2em;
+    border-radius: 1em 1em 0 0;
+    margin: 0;
+    background-color: #E54B56;
+    text-align: center;
+    zoom: 1;
+    transition: 0.25s;
+}
+
+.o_price {
+    cursor: pointer;
+    font-size: 1.7em;
+    background-color: #F4A444;
+    text-align: center;
+    zoom: 1;
+    transition: 0.25s;
+}
+
+.o_hours {
+    cursor: pointer;
+    font-size: 1.5em;
+    background-color: #25D53F;
+    text-align: center;
+    zoom: 1;
+    transition: 0.25s;
+}
+
+.o_text {
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 0 0 1em 1em;
+    background-color: #4A6A69;
+    text-align: center;
+    zoom: 1;
+    transition: 0.25s;
+}
+
+.o_model:hover,
+.o_price:hover,
+.o_text:hover,
+.o_hours:hover,
+.o_model:hover {
+    -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.75);
+    transform: matrix(1.15, 0.00, 0.00, 1.15, 0, 0);
+    -ms-transform: matrix(1.15, 0.00, 0.00, 1.15, 0, 0);
+    -webkit-transform: matrix(1.15, 0.00, 0.00, 1.15, 0, 0);
+}
+
+.offers-item div {
+    border: 2px solid #DDD;
+    font-family: 'Teko', sans-serif;
+    color: white;
+    margin: 0;
+}
+
+
+/*------------------------FOOTER CONTENT------------------------*/
+
+.offers-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.offers-item {
+    width: 300px;
+    height: auto;
+    margin: 1%;
+    padding: 0;
+}
+
+
+/* @media screen and (min-width: 800px) {
+    .offers-box {
+        width: 200px;
+        height: 200px;
+    }
+} */
+
+
+/* On screens that are 600px or less, set the background color to olive */
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: olive;
+    }
+}
+
+.testo-box {
+    text-align: center;
+}
+
+.testo-item {
+    background: #fffa;
+    border-radius: 10px;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.testo-item q {
+    font-style: italic;
+}
