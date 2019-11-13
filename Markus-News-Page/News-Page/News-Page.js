@@ -19,7 +19,8 @@ newslist.forEach(news => {
                         <ul class="list-group list-group-flush info">
                             <li class="list-group-item">Course start: ${news.startdate}</li>
                             <li class="list-group-item">Seats left: ${news.seats-news.seatstaken} from ${news.seats}</li>
-                            <li class="list-group-item">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+                            <li class="list-group-item">${news.shorttext}</li>
+                            <li style="display:none" class="list-group-item">${news.longtext}</li>
                         </ul>
                     </div>
                 </div>
@@ -27,7 +28,7 @@ newslist.forEach(news => {
                     <ul class="list-group list-group-flush price">
                         <li class="list-group-item">Price: ${news.price}€</li>
                     </ul>
-                    <a href="#!" class="btn btn-primary button">Go somewhere</a>
+                    <button class="btn btn-primary button">Go somewhere</button>
                 </div>
             </div>
             <div class="card-footer">
@@ -39,14 +40,19 @@ newslist.forEach(news => {
 
 
 
-    // Discount
-    let pricehook = document.querySelectorAll("ul.list-group.list-group-flush.price");
+    
+    // Info
+
     let infohook = document.querySelectorAll("ul.list-group.list-group-flush.info");
     
 
     if (news.seats === news.seatstaken) {
         infohook[counter].children[1].innerText = "Booked up"
     }
+
+    // Discount
+
+    let pricehook = document.querySelectorAll("ul.list-group.list-group-flush.price");
 
     if (news.hasOwnProperty("rabattprice")) {
 
@@ -58,6 +64,18 @@ newslist.forEach(news => {
         pricehook[counter].appendChild(obj);
     }
 
+    // Button Event Toggle
+
+    let button = document.querySelectorAll("button.btn.btn-primary.button");
+    button[0].addEventListener("click", function(){
+        readMore(event)});
+
     counter++;
 
 });
+
+    function readMore(event) {
+        let texttoggle = event.srcElement.parentElement.parentElement.children[1].querySelector("ul").children;
+        $(texttoggle[2]).toggle("slow");
+        $(texttoggle[3]).toggle("slow");
+}
