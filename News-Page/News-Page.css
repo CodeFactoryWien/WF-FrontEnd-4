@@ -1,0 +1,12 @@
+.card-img {
+    width: 30%;
+    height: 100%;
+}
+
+.box {
+    display: flex;
+}
+
+.card-body {
+    height: 70%;
+}

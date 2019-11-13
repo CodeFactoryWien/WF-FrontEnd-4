@@ -1,0 +1,35 @@
+const newslist = [
+{
+    "id": 1,
+    "name": "Java course",
+    "price": 1200,
+    "rabattprice": 1000,
+    "startdate": "05.12.2019",
+},
+{
+    "id": 2,
+    "name": "Java course",
+    "price": 1200,
+    "startdate": "05.12.2019",
+},
+{
+    "id": 3,
+    "name": "Java course",
+    "price": 1200,
+    "startdate": "05.12.2019",
+},
+{
+    "id": 4,
+    "name": "Java course",
+    "price": 1200,
+    "rabattprice": 1000,
+    "startdate": "05.12.2019",
+},
+{
+    "id": 5,
+    "name": "Java course",
+    "price": 1200,
+    "rabattprice": 1000,
+    "startdate": "05.12.2019",
+},
+]
