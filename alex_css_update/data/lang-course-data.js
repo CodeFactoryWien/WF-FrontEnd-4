@@ -1,59 +1,7 @@
 const LANG_COURSE_DATA = [
   ////////////////////////////
-  {
-    id: 0,
-    img: "landing_narrow",
-    name: "",
-    blurb: ``,
-    technologies: ["", "", ""],
-    text: ``,
-    videoUrls: ["", "", ""],
-    courseSpaceInfo: ``,
-    teachers: [{
-            img: "",
-            name: "",
-            text: "",
-        },
-        {
-            img: "",
-            name: "",
-            text: "",
-        }
-    ],
-    news: [{
-            date: "",
-            text: ""
-        },
-        {
-            date: "",
-            text: ""
-        }
-    ],
-    offers: [{
-            name: "",
-            price: 0,
-            hours: 0,
-            text: ``
-        },
-        {
-            name: "",
-            price: 0,
-            hours: 0,
-            text: ``
-        },
-    ],
-    testimonials: [{
-            name: "",
-            text: ""
-        },
-        {
-            name: "",
-            text: ""
-        }
-    ]
-    },
     {
-    id: 1,
+    id: 6,
     img: "js",
     name: "Javascript",
     blurb: `The language of the web`,
@@ -154,7 +102,7 @@ const LANG_COURSE_DATA = [
 
   //////////////////////
   {
-    id: 2,
+    id: 7,
     img: "haskell",
     name: "Haskell",
     blurb: `Haskell is very hard.`,
@@ -271,7 +219,7 @@ const LANG_COURSE_DATA = [
 
   ////////////////////////////////
   {
-    id: 3,
+    id: 8,
     img: "brainfuck",
     name: "Brainfuck",
     blurb: `The only language that can &gt;&gt;&gt;--&lt;-&gt;:..&gt;[[]]&gt;&lt;&lt;&lt;&lt;&lt;`,
@@ -394,4 +342,61 @@ const LANG_COURSE_DATA = [
       }
     ]
   }
+]
+
+const HOME_CONTENT = [{
+  id: 0,
+  img: "./img/landing_narrow.jpg",
+  name: "HOME",
+  blurb: ``,
+  technologies: ["", "", ""],
+  text: ``,
+  videoUrls: ["", "", ""],
+  courseSpaceInfo: ``
+}]
+
+const newslist = [
+  {
+    "id": 1,
+    "name": "Java course",
+    "price": 1200,
+    "rabattprice": 1000,
+    "startdate": "05.12.2019",
+    "seats": 20,
+    "seatstaken": 14,
+},
+{
+    "id": 2,
+    "name": "Java course",
+    "price": 1200,
+    "startdate": "05.12.2019",
+    "seats": 20,
+    "seatstaken": 20,
+},
+{
+    "id": 3,
+    "name": "Java course",
+    "price": 1200,
+    "startdate": "05.12.2019",
+    "seats": 10,
+    "seatstaken": 2,
+},
+{
+    "id": 4,
+    "name": "Java course",
+    "price": 1200,
+    "rabattprice": 1000,
+    "startdate": "08.12.2019",
+    "seats": 40,
+    "seatstaken": 5,
+},
+{
+    "id": 5,
+    "name": "Java course",
+    "price": 1200,
+    "rabattprice": 1000,
+    "startdate": "05.12.2019",
+    "seats": 20,
+    "seatstaken": 14,
+},
 ]
