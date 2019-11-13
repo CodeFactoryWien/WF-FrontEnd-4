@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.col-12 {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.name {
+    justify-self: flex-start;
+}
+
+.image-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    height: auto;
+    width: 100%;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+#landing {
+    background-image: url("../img/landing_narrow.jpg");
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    bottom: 0; left: 0;
+}
+
+
+/*------NAVBAR-------*/
+
+.navbar,
+.navbar-dark,
+.bg-dark {
+    background-color: rgba(50, 50, 50, 1)!important;
+    color: white;
+    font-size: 1.2em;
+}
+
+.nav-item {
+    color: peru;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.navbar-toggle .icon-bar {
+    z-index: 1;
+    color: white;
+    background-color: #fff;
+}
+
+.nav-link[routerLink="/"],
+.nav-link[routerLink="/guest-list"],
+.nav-link[routerLink="/travels"] {
+    color: #999;
+}
+
+.navbar-dark:hover,
+.navbar-nav:hover,
+.nav-link:hover {
+    color: peru!important;
+}
+
+a {
+    cursor: pointer
+}
+
+
+/*------------------COURSE CONTENT---------------*/
+
+/* .course-bg {
+    background-color: #fff;
+} */
