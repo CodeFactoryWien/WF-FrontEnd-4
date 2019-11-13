@@ -67,7 +67,7 @@ newslist.forEach(news => {
     // Button Event Toggle
 
     let button = document.querySelectorAll("button.btn.btn-primary.button");
-    button[0].addEventListener("click", function(){
+    button[counter].addEventListener("click", function(){
         readMore(event)});
 
     counter++;
