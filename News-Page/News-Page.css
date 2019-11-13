@@ -1,6 +1,6 @@
 .card-img {
     width: 30%;
-    height: 100%;
+    height: auto;
 }
 
 .box {
@@ -9,4 +9,10 @@
 
 .card-body {
     height: 70%;
+}
+
+.button {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
 }
