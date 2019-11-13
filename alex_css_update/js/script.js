@@ -30,11 +30,13 @@ class Home {
 
 class News {
 
-    constructor(name, startdate, seats, seatstaken, price) {
+    constructor(name, startdate, seats, seatstaken,shorttext,longtext,price) {
         this.name = name;
         this.startdate = startdate;
         this.seats = seats;
         this.seatstaken = seatstaken;
+        this.shorttext = shorttext;
+        this.longtext = longtext;
         this.price = price;
 
     }
@@ -52,7 +54,8 @@ class News {
                             <ul class="list-group list-group-flush info">
                                 <li class="list-group-item">Course start: ${this.startdate}</li>
                                 <li class="list-group-item">Seats left: ${this.seats-this.seatstaken} from ${this.seats}</li>
-                                <li class="list-group-item">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+                                <li class="list-group-item">${this.shorttext}</li>
+                                <li style="display:none" class="list-group-item">${this.longtext}</li>
                             </ul>
                         </div>
                     </div>
@@ -60,7 +63,7 @@ class News {
                         <ul class="list-group list-group-flush price">
                             <li class="list-group-item">Price: ${this.price}€</li>
                         </ul>
-                        <a href="#!" class="btn btn-primary button">Go somewhere</a>
+                        <a href="#!" id="button${n[i].id}" class="btn btn-primary button">Go somewhere</a>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -202,35 +205,45 @@ window.onload = function () {
                 <div class="row" id="row-${l[i].id}">${homearr[i].display()}</div></div>`)
     }
 
-
+    
     $("#nav").append(`<li class="nav-item"><a href="#tab-news" class="nav-link" role="tab" data-toggle="tab">NEWS</a></li>`);
     $("#TabContent").append(`<div class="tab-pane fade" id="tab-news" role="tabpanel"></div>`);
-
-
+    
+    
     for (i in n) {
 
-        newsarr.push(new News(n[i].name, n[i].startdate, n[i].seats, n[i].seatstaken, n[i].price));
-
-
+        newsarr.push(new News(n[i].name, n[i].startdate, n[i].seats, n[i].seatstaken, n[i].shorttext, n[i].longtext, n[i].price));
+        
+        
         $("#tab-news").append(`<div class="row">${newsarr[i].display()}</div>`);
-
+        
         // Discount
         let pricehook = document.querySelectorAll("ul.list-group.list-group-flush.price");
         let infohook = document.querySelectorAll("ul.list-group.list-group-flush.info");
-
-
+        
+        
         if (n[i].seats === n[i].seatstaken) {
             infohook[counter].children[1].innerText = "Booked up"
         }
-
+        
         if (n[i].hasOwnProperty("rabattprice")) {
-
+            
             let obj = document.createElement("li");
             obj.classList.add("list-group-item");
             obj.innerText = "Newprice: " + n[i].rabattprice + "€";
-
+            
             pricehook[counter].firstElementChild.style.textDecoration = "line-through";
             pricehook[counter].appendChild(obj);
+        }
+        
+        let button = document.getElementById(`button${n[i].id}`);
+        button.addEventListener("click", function(){
+            readMore(event)});
+
+            function readMore(event) {
+                let texttoggle = event.srcElement.parentElement.parentElement.children[1].querySelector("ul").children;
+                $(texttoggle[2]).toggle("slow");
+                $(texttoggle[3]).toggle("slow");
         }
 
         counter++;
