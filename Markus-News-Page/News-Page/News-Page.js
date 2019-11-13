@@ -1,6 +1,6 @@
 
 // Generate Cards
-var counter = 0
+var counter = 0;
 
 newslist.forEach(news => {
 
@@ -32,13 +32,13 @@ newslist.forEach(news => {
                 </div>
             </div>
             <div class="card-footer">
-                2 days ago
+                2 days left
             </div>
         </div>
     </div>
     `
 
-
+    postage(news);
 
     
     // Info
@@ -64,18 +64,35 @@ newslist.forEach(news => {
         pricehook[counter].appendChild(obj);
     }
 
+    /*  Button need to be fixed! MK
+    
     // Button Event Toggle
 
     let button = document.querySelectorAll("button.btn.btn-primary.button");
     button[0].addEventListener("click", function(){
         readMore(event)});
 
+    */
     counter++;
-
 });
 
     function readMore(event) {
         let texttoggle = event.srcElement.parentElement.parentElement.children[1].querySelector("ul").children;
         $(texttoggle[2]).toggle("slow");
         $(texttoggle[3]).toggle("slow");
+}
+
+
+// Time Function
+
+function postage(news) {
+
+    let footerlist = document.querySelectorAll("div.card-footer");
+
+    let currentdate = Date.now();
+    let timestamp = Date.parse(news.timestamp);
+    let datediff = currentdate - timestamp;
+    let days = Math.floor(datediff / 1000 / 60 / 60 / 24);
+
+    footerlist[counter].innerHTML = "Posted: " + days.toString() + " days before";
 }
