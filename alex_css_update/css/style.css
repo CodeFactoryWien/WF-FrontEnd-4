@@ -121,3 +121,21 @@ a {
 /* .course-bg {
     background-color: #fff;
 } */
+.card-img {
+    width: 30%;
+    height: auto;
+}
+
+.box {
+    display: flex;
+}
+
+.card-body {
+    height: 70%;
+}
+
+.button {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+}

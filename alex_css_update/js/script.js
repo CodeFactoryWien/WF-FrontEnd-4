@@ -217,6 +217,8 @@ window.onload = function () {
         
         $("#tab-news").append(`<div class="row">${newsarr[i].display()}</div>`);
         
+        postage(n[i]);
+
         // Discount
         let pricehook = document.querySelectorAll("ul.list-group.list-group-flush.price");
         let infohook = document.querySelectorAll("ul.list-group.list-group-flush.info");
@@ -250,6 +252,19 @@ window.onload = function () {
 
 
     }
+    // Time Function
+
+function postage(news) {
+
+    let footerlist = document.querySelectorAll("div.card-footer");
+
+    let currentdate = Date.now();
+    let timestamp = Date.parse(news.timestamp);
+    let datediff = currentdate - timestamp;
+    let days = Math.floor(datediff / 1000 / 60 / 60 / 24);
+
+    footerlist[counter].innerHTML = "Posted: " + days.toString() + " days before";
+}
 
 
     for (i in x) { //for(i=0;i<x.length;i++){
