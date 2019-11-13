@@ -288,7 +288,7 @@ const LANG_COURSE_DATA = [
     teachers: [
       {
         img: "img/crazyman.jpg",
-        name: "Brian Fakhed",
+        name: "Brian Fackhaed",
         text: "I always wanted to teach this beautiful understated language to people and now I can finally murder my family!",
       },
       {
