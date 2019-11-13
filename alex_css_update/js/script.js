@@ -1,28 +1,83 @@
 objs = [];
+homearr = [];
+newsarr = [];
+var counter = 0
+
+
+
 const x = LANG_COURSE_DATA;
-const landing = HOME_CONTENT;
+const l = HOME_CONTENT;
+const n = newslist;
 
-class home {
 
-    constructor(img) {
+class Home {
+
+    constructor(img, name) {
         this.img = img;
+        this.name = name;
     }
     display() {
-        return `<div class="tab-content" id="TabContent">
-                    <div class="tab-pane fade show" id="home" role="tabpanel">
-                        <div class="row" id="home-row">
-                            <div class="col-12">
-                            <img src="img/${this.img}.jpg">
-                            </div>
-                        </div>
+        return `
+                <div class="row" id="home-row">
+                    <div class="col-12">
+                    <img src="${this.img}">
                     </div>
                 </div>
-        `
+                `
     }
 }
 
 
-class Language {
+class News {
+
+    constructor(name, startdate, seats, seatstaken, price) {
+        this.name = name;
+        this.startdate = startdate;
+        this.seats = seats;
+        this.seatstaken = seatstaken;
+        this.price = price;
+
+    }
+    display() {
+        return `
+            <div class="col-lg-10">
+            <div class="card">
+                <div class="card-header">
+                    ${this.name}
+                </div>
+                <div class="box">
+                    <img class="card-img" src="./img/java.jpg" alt="Card image">
+                    <div class="middlebox">
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush info">
+                                <li class="list-group-item">Course start: ${this.startdate}</li>
+                                <li class="list-group-item">Seats left: ${this.seats-this.seatstaken} from ${this.seats}</li>
+                                <li class="list-group-item">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rightbox">
+                        <ul class="list-group list-group-flush price">
+                            <li class="list-group-item">Price: ${this.price}€</li>
+                        </ul>
+                        <a href="#!" class="btn btn-primary button">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    2 days ago
+                </div>
+            </div>
+        </div>
+        `
+
+
+
+
+    }
+}
+
+
+class Courses {
 
     constructor(img, name, blurb, technologies, text, videoUrls, courseSpaceInfo, teachers, news, offers, testimonials) {
         this.img = img,
@@ -39,7 +94,7 @@ class Language {
 
     }
     display() {
-            return `
+        return `
 
 
             <div class="course-bg container-fluid p-0">
@@ -125,18 +180,74 @@ class Language {
             </div>
         </div>
                 `
-            }
+    }
+}
+
+// objs.push(new Home(landing.img));
+
+
+
+
+
+window.onload = function () {
+
+    for (i in l) {
+
+        homearr.push(new Home(l[i].img, l[i].name));
+
+
+        $("#nav").prepend(`<li class="nav-item"><a href="#tab-${l[i].id}" class="nav-link active" role="tab" data-toggle="tab">${l[i].name}</a></li>`);
+
+        $("#TabContent").append(`<div class="tab-pane fade show active" id="tab-${l[i].id}" role="tabpanel">
+                <div class="row" id="row-${l[i].id}">${homearr[i].display()}</div></div>`)
+    }
+
+
+    $("#nav").append(`<li class="nav-item"><a href="#tab-news" class="nav-link" role="tab" data-toggle="tab">NEWS</a></li>`);
+    $("#TabContent").append(`<div class="tab-pane fade" id="tab-news" role="tabpanel"></div>`);
+
+
+    for (i in n) {
+
+        newsarr.push(new News(n[i].name, n[i].startdate, n[i].seats, n[i].seatstaken, n[i].price));
+
+
+        $("#tab-news").append(`<div class="row">${newsarr[i].display()}</div>`);
+
+        // Discount
+        let pricehook = document.querySelectorAll("ul.list-group.list-group-flush.price");
+        let infohook = document.querySelectorAll("ul.list-group.list-group-flush.info");
+
+
+        if (n[i].seats === n[i].seatstaken) {
+            infohook[counter].children[1].innerText = "Booked up"
         }
 
-        window.onload = function(){
+        if (n[i].hasOwnProperty("rabattprice")) {
 
-            for(i in x){  //for(i=0;i<x.length;i++){
+            let obj = document.createElement("li");
+            obj.classList.add("list-group-item");
+            obj.innerText = "Newprice: " + n[i].rabattprice + "€";
 
-                objs.push(new Language(x[i].img, x[i].name, x[i].blurb, x[i].technologies, x[i].text, x[i].videoUrls, x[i].courseSpaceInfo, x[i].teachers, x[i].news, x[i].offers, x[i].testimonials));
-                //$("#tabs").append(`<a class="dropdown-item" href="#tab-${x[i].id}"role="tab" data-toggle="tab">${x[i].name}</a>`);
-                console.log(objs[i].display())
-                $("#TabContent").append(`<div class="tab-pane fade" id="tab-${x[i].id}" role="tabpanel">
+            pricehook[counter].firstElementChild.style.textDecoration = "line-through";
+            pricehook[counter].appendChild(obj);
+        }
+
+        counter++;
+
+
+    }
+
+
+    for (i in x) { //for(i=0;i<x.length;i++){
+
+        objs.push(new Courses(x[i].img, x[i].name, x[i].blurb, x[i].technologies, x[i].text, x[i].videoUrls, x[i].courseSpaceInfo, x[i].teachers, x[i].news, x[i].offers, x[i].testimonials));
+
+        $(`#Courses`).append(`<a class="dropdown-item" href="#tab-${x[i].id}"role="tab" data-toggle="tab">${x[i].name}</a>`);
+
+        $("#TabContent").append(`<div class="tab-pane fade" id="tab-${x[i].id}" role="tabpanel">
                 <div class="row col-12" id="row-${x[i].id}">${objs[i].display()}</div></div>`)
 
-            }
-        }
+    }
+
+}
