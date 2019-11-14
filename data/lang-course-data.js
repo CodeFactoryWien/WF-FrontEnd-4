@@ -31,7 +31,7 @@ const LANG_COURSE_DATA = [
       are mostly virtual. Our coding monkeys sometimes start randomly generating Shakespeare's complete
       works, this is when we know that they need a break.</p>
     `,
-        videoUrls: ["", ""], //videoUrls: ["https://www.youtube.com/embed/PkZNo7MFNFg", "https://www.youtube.com/embed/2pL28CcEijU"],
+        videoUrls: ["", ""], videoUrls: ["https://www.youtube.com/embed/PkZNo7MFNFg", "https://www.youtube.com/embed/2pL28CcEijU"],
         courseSpaceInfo: `<p>This course is based in our main headquarters. It is very nice there.
       <span class=strikethru>We have a coffee machine with hazelnut flavored coffee</span>we
       have a nice little kitchen with all the necessary implements.</p>
@@ -48,7 +48,7 @@ const LANG_COURSE_DATA = [
                 text: "Proggo has been programming since he was a little baby",
             },
             {
-                img: "face1",
+                img: "drill",
                 name: "Scriptappa McSupergreat",
                 text: "Founding member of Microsoft, Apple, Google and Burger King. Likes cheeseburgers and perl poetry.",
             }
@@ -128,7 +128,7 @@ const LANG_COURSE_DATA = [
       are mostly virtual. Our coding monkeys sometimes start randomly generating Shakespeare's complete
       works, this is when we know that they need a break.</p>
     `,
-        videoUrls: ["", "", ""], //videoUrls: ["https://www.youtube.com/embed/5SD2j9k6E7c", "https://www.youtube.com/embed/2f-89z1zkGQ", "https://www.youtube.com/embed/iSmkqocn0oQ"],
+        videoUrls: ["", "", ""], videoUrls: ["https://www.youtube.com/embed/5SD2j9k6E7c", "https://www.youtube.com/embed/2f-89z1zkGQ", "https://www.youtube.com/embed/iSmkqocn0oQ"],
         courseSpaceInfo: `<p>The haskell course is held at our special facilities in space. Our space base alternates
       between orbiting the moon and mars and is reached with a special reusable rocket ship supplied personally
       by Elon Musk</p>
@@ -259,7 +259,7 @@ const LANG_COURSE_DATA = [
       you're too shy to say it Inside we both know what's been going on We know
       the game and we're gonna play it</p>
     `,
-        videoUrls: ["", "", ""], //    videoUrls: ["https://www.youtube.com/embed/-3C200nCwpk", "https://www.youtube.com/embed/nyfj3O6sYao", "https://www.youtube.com/embed/tcHaMWktCYE"],
+        videoUrls: ["", "", ""], videoUrls: ["https://www.youtube.com/embed/-3C200nCwpk", "https://www.youtube.com/embed/nyfj3O6sYao", "https://www.youtube.com/embed/tcHaMWktCYE"],
         courseSpaceInfo: `<p>Since learning brainfuck sometimes has weird effects on people's brains,
       we conduct our brainfuck course in our special personal safety facilities. Our CodeSafectory offices
       have soft, pillow-padded walls, a kitchen without hot elements and sharp objects and a dedicated
