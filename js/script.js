@@ -69,7 +69,6 @@ class News {
                     </div>
                 </div>
                 <div class="card-footer">
-                    2 days ago
                 </div>
             </div>
         </div>

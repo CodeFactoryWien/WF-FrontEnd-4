@@ -388,7 +388,7 @@ const newslist = [{
         `,
         "seats": 20,
         "seatstaken": 20,
-        "timestamp": "2018-05-09",
+        "timestamp": "2019-05-09",
         "category": "Course"
 
     },
@@ -415,7 +415,8 @@ const newslist = [{
         `,
         "seats": 10,
         "seatstaken": 2,
-        "timestamp": "2017-05-09"
+        "timestamp": "2018-05-09",
+        "category": "Course"
 
     },
     {
@@ -435,7 +436,8 @@ const newslist = [{
         `,
         "seats": "",
         "seatstaken": "",
-        "timestamp": "2019-07-09"
+        "timestamp": "2019-07-09",
+        "category": "News"
 
     },
     {
@@ -449,7 +451,8 @@ const newslist = [{
         "longtext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
         "seats": 20,
         "seatstaken": 14,
-        "timestamp": "2018-05-09"
+        "timestamp": "2018-07-12",
+        "category": "Course"
 
     },
 ].sort((a,b) => new Date(a.timestamp) > new Date(b.timestamp) ? -1 : 1)
