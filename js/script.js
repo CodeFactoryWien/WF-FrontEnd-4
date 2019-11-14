@@ -43,7 +43,7 @@ class News {
     }
     display() {
         return `
-            <div class="col-lg-10 mt-5">
+            <div class="col-lg-10 mt-4 mb-4 mx-auto">
             <div class="card border border-secondary">
                 <div class="card-header d-flex justify-content-between align-items-center background-card">
                     <h4>${this.name}</h4> 
@@ -87,7 +87,7 @@ class Courses {
 
     constructor(img, name, blurb, technologies, text, videoUrls, courseSpaceInfo, teachers, news, offers, testimonials) {
         this.img = img,
-        this.name = name;
+            this.name = name;
         this.blurb = blurb;
         this.technologies = technologies;
         this.text = text;
@@ -339,4 +339,3 @@ function news() {
     paragraph.textContent = newsletter.news[val_news];
 }
 news();
-
