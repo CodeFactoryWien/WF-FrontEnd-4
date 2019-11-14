@@ -340,3 +340,4 @@ function news() {
     paragraph.textContent = newsletter.news[val_news];
 }
 news();
+
