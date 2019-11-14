@@ -388,7 +388,7 @@ const newslist = [{
         `,
         "seats": 20,
         "seatstaken": 20,
-        "timestamp": "2019-05-09",
+        "timestamp": "1977-02-10",
         "category": "Course"
 
     },
@@ -415,7 +415,7 @@ const newslist = [{
         `,
         "seats": 10,
         "seatstaken": 2,
-        "timestamp": "2018-05-09",
+        "timestamp": "2017-05-09",
         "category": "Course"
 
     },
@@ -446,7 +446,7 @@ const newslist = [{
         "img": "java.jpg",
         "price": 1200,
         "rabattprice": 1000,
-        "startdate": "05.12.2019",
+        "startdate": "05.12.2018",
         "shorttext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
         "longtext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
         "seats": 20,
