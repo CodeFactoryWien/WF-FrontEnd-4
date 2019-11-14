@@ -258,6 +258,8 @@ window.onload = function () {
             pricehook[counter].firstElementChild.style.textDecoration = "line-through";
             pricehook[counter].appendChild(obj);
         }
+
+        // Button Event Toggle
         
         let button = document.getElementById(`button${n[i].id}`);
         button.addEventListener("click", function(){
