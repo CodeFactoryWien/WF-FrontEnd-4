@@ -345,40 +345,72 @@ const HOME_CONTENT = [{
 
 const newslist = [{
         "id": 1,
-        "name": "Java course",
-        "img": "java.jpg",
+        "name": "See Rammstein Live at Code Factory!",
+        "img": "notrammstein.jpg",
         "price": "",
         "rabattprice": "",
-        "startdate": "05.12.2019",
-        "shorttext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
-        "longtext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+        "startdate": "",
+        "shorttext": "Rammstein are coming to Code Factory at 24.12.2019 to do one of their famous stealth Christmas concerts!",
+        "longtext": `<p>Everybody and their grandma loves Rammstein, and we here at CF do too! That's why we booked the kings of
+          bubblegum nihilist metal-pop to play live on our balcony. Let's rock the old farts who live around our block right
+          out of their old people socks! Free entry!</p>
+        `,
         "seats": "",
         "seatstaken": "",
         "timestamp": "2019-11-06"
     },
     {
         "id": 2,
-        "name": "Java course",
-        "img": "java.jpg",
-        "price": 1200,
-        "rabattprice": 1000,
-        "startdate": "05.12.2019",
-        "shorttext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
-        "longtext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+        "name": "FORTRAN course open for registration",
+        "img": "oldlaptop.jpg",
+        "price": 12,
+        "rabattprice": 10,
+        "startdate": "1977-07-07",
+        "shorttext": "Learn the cutting edge programming language of Tomorrow",
+        "longtext": `
+          <p>Your Minecraft server can be ddosed so easily. I can use my Google
+          downstream tcp ip layer 7 http protocol to easily penetrate the java
+          c++ router metasploit code, from there I can run a reverse upstream python
+          packet to hack into the mainframe of your server, then I can download the
+          database dumping IP protocol c++ python JavaScript ssh graphics card
+          packets to disable your Minecraft transmission cmatrix ping nestat sockets
+          microwave processing computer scratch IP Address. Your Minecraft server
+          will be down in milliseconds. Don’t mess with me, skiddy.</p>
+          <p>Your Minecraft server can be ddosed so easily. I can use my Google
+          downstream tcp ip layer 7 http protocol to easily penetrate the java
+          c++ router metasploit code, from there I can run a reverse upstream python
+          packet to hack into the mainframe of your server, then I can download the
+          database dumping IP protocol c++ python JavaScript ssh graphics card
+          packets to disable your Minecraft transmission cmatrix ping nestat sockets
+          microwave processing computer scratch IP Address. Your Minecraft server
+          will be down in milliseconds. Don’t mess with me, skiddy.</p>
+        `,
         "seats": 20,
         "seatstaken": 20,
-        "timestamp": "2018-05-09"
+        "timestamp": "1977-05-09"
 
     },
     {
         "id": 3,
-        "name": "Java course",
-        "img": "java.jpg",
+        "name": "Haskell Basic course open for registration",
+        "img": "haskell-guy.jpeg",
         "price": 1200,
         "rabattprice": 1000,
-        "startdate": "05.12.2019",
-        "shorttext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
-        "longtext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+        "startdate": "05.12.2017",
+        "shorttext": "Register now!",
+        "longtext": `
+          <p>Every night in my dreams I see you, I feel you That is how I know you
+          go on Far across the distance And spaces between us You have come to
+          show you go on Near, far, wherever you are I believe that the heart does
+          go on Once more you ope</p><p>n the door And you're here in my heart And my heart
+          will go on and on Love can touch us one time And last for a lifetime And
+          never let go 'til we're gone Love was when I loved you One true time
+          I hold to In my life we'll al</p><p>ways go on Near, far, wherever you are
+          I believe that the heart does go on Once more you open the door And you're
+          here in my heart And my heart will go on and on You're here, there's
+          nothing I fear And I know that my h</p><p>eart will go on We'll stay forever this
+          way You are safe in my heart And my heart will go on and on</p>
+        `,
         "seats": 10,
         "seatstaken": 2,
         "timestamp": "2017-05-09"
@@ -386,16 +418,22 @@ const newslist = [{
     },
     {
         "id": 4,
-        "name": "Java course",
-        "img": "java.jpg",
-        "price": 1200,
-        "rabattprice": 1000,
-        "startdate": "05.12.2019",
-        "shorttext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
-        "longtext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
-        "seats": 40,
-        "seatstaken": 5,
-        "timestamp": "2010-05-09"
+        "name": "CodeFactory opens Mars branch",
+        "img": "mars.jpg",
+        "price": "",
+        "rabattprice": "",
+        "startdate": "",
+        "shorttext": "Is there Life On Mars? YES - and it's HACKIN'",
+        "longtext": `
+          <p>After years of preparation and base-building we finally announce proudly the opening of
+          our first Marsian CodeFactory company branch! There will be a fancy opening ceremony 
+          and everything, where King Elon The Great will cut the Ceremonial Ribbon. The date is
+          still T.B.A., but it will be BRUHSOME!</p>
+          <p>Afterparty in the King's Antigrav Chambers!</p>
+        `,
+        "seats": "",
+        "seatstaken": "",
+        "timestamp": "2019-07-09"
 
     },
     {

@@ -1,0 +1,25 @@
+.card-img {
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.box {
+  align-items: center;
+}
+
+.tab-pane {
+  margin-top: 100px;
+}
+
+.rightbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightbox .button {
+  position: inherit;
+  bottom: 0;
+  justify-self: flex-end;
+}

@@ -52,7 +52,7 @@ class News {
                     <div class="middlebox">
                         <div class="card-body">
                             <ul class="list-group list-group-flush info">
-                                <li class="list-group-item">Course start: ${this.startdate}</li>
+                                <li class="list-group-item" style="${this.startdate ? "" : "display:none"}">Course start: ${this.startdate}</li>
                                 <li class="list-group-item">Seats left: ${this.seats-this.seatstaken} from ${this.seats}</li>
                                 <li class="list-group-item">${this.shorttext}</li>
                                 <li style="display:none" class="list-group-item">${this.longtext}</li>
@@ -308,7 +308,7 @@ function postage(news) {
     let datediff = currentdate - timestamp;
     let days = Math.floor(datediff / 1000 / 60 / 60 / 24);
 
-    footerlist[counter].innerHTML = "Posted: " + days.toString() + " days before";
+    footerlist[counter].innerHTML = "Posted: " + days.toString() + " days ago";
 }
 
 
