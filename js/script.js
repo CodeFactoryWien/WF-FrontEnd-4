@@ -279,6 +279,7 @@ window.onload = function () {
 
             function readMore(event) {
                
+               
                 let texttoggle = event.srcElement.parentElement.parentElement.children[1].querySelector("ul").children;
                 $(texttoggle[2]).toggle("slow");
                 $(texttoggle[3]).toggle("slow");
@@ -331,7 +332,7 @@ var paragraph = document.getElementById("newsletter");
 
 
 function news() { 
-    var val_news = Math.floor(Math.random() * 11);
+    var val_news = Math.round(Math.random() * 10);
     console.log(newsletter.news[0]);
     paragraph.textContent = newsletter.news[val_news];
 }
