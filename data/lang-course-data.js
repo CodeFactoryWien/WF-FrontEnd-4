@@ -357,7 +357,8 @@ const newslist = [{
         `,
         "seats": "",
         "seatstaken": "",
-        "timestamp": "2019-11-06"
+        "timestamp": "2019-11-06",
+        "category": "News"
     },
     {
         "id": 2,
@@ -387,7 +388,8 @@ const newslist = [{
         `,
         "seats": 20,
         "seatstaken": 20,
-        "timestamp": "1977-05-09"
+        "timestamp": "2018-05-09",
+        "category": "Course"
 
     },
     {
