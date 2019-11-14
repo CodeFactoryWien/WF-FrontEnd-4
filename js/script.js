@@ -63,7 +63,7 @@ class News {
                         <ul class="list-group list-group-flush price">
                             <li class="list-group-item">Price: ${this.price}€</li>
                         </ul>
-                        <a href="#!" id="button${n[i].id}" class="btn btn-primary button">Go somewhere</a>
+                        <a href="#!" id="button${n[i].id}" class="btn btn-primary button">Show More</a>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -278,10 +278,19 @@ window.onload = function () {
             readMore(event)});
 
             function readMore(event) {
+               
                 let texttoggle = event.srcElement.parentElement.parentElement.children[1].querySelector("ul").children;
                 $(texttoggle[2]).toggle("slow");
                 $(texttoggle[3]).toggle("slow");
-        }
+
+                if(event.target.innerText == "Show More") {
+
+                    event.target.innerText = "Show Less"
+                    
+                } else {
+                    event.target.innerText = "Show More"
+                }
+               }
 
         counter++;
 
