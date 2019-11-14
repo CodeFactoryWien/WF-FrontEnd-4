@@ -48,7 +48,7 @@ const LANG_COURSE_DATA = [
                 text: "Proggo has been programming since he was a little baby",
             },
             {
-                img: "face1",
+                img: "drill",
                 name: "Scriptappa McSupergreat",
                 text: "Founding member of Microsoft, Apple, Google and Burger King. Likes cheeseburgers and perl poetry.",
             }

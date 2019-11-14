@@ -18,9 +18,9 @@ class Home {
     }
     display() {
         return `
+        <style>.col-12{height: 100vh}</style>
                         <div class="row" id="home-row">
-                            <div class="col-12">
-                            <img src="img/landing_narrow.jpg">
+                            <div class="col-12 overflow-hidden" id="landingimg">
                             </div>
                 </div>
         `
@@ -300,3 +300,16 @@ function postage(news) {
     }
 
 }
+
+// Newsletter ----
+
+var paragraph = document.getElementById("newsletter");
+
+
+
+function news() { 
+    var val_news = Math.floor(Math.random() * 11);
+    console.log(newsletter.news[0]);
+    paragraph.textContent = newsletter.news[val_news];
+}
+news();
