@@ -405,4 +405,4 @@ const newslist = [{
         "timestamp": "2018-05-09"
 
     },
-]
+].sort((a,b) => new Date(a.timestamp) > new Date(b.timestamp) ? -1 : 1)
