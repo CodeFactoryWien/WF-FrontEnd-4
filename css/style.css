@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-
 }
 
 body {
@@ -12,6 +11,11 @@ body {
 header {
     padding-top: 3rem;
     text-align: center;
+}
+
+#landingimg {
+    background-position-y: 50%;
+    background-image: url("../img/landing_narrow.png");
 }
 
 .col-12 {
@@ -65,7 +69,7 @@ header {
 }
 
 .row {
-    margin:0;
+    margin: 0;
 }
 
 
@@ -123,11 +127,10 @@ a {
     cursor: pointer
 }
 
-.dropdown-item.active, .dropdown-item:active{
+.dropdown-item.active,
+.dropdown-item:active {
     background-color: #6a5b48;
 }
-
-
 
 .tab-content {
     position: absolute;
@@ -137,11 +140,12 @@ a {
     height: auto;
 }
 
+
 /*runner text*/
+
 @font-face {
     font-family: 'dots_all_for_now_jlregular';
-    src: url('./DotsAllForNow/dotsallfornow-webfont.woff2') format('woff2'),
-         url('./DotsAllForNow/dotsallfornow-webfont.woff') format('woff');
+    src: url('./DotsAllForNow/dotsallfornow-webfont.woff2') format('woff2'), url('./DotsAllForNow/dotsallfornow-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -149,16 +153,16 @@ a {
 marquee {
     position: absolute;
     font-size: 0.9em;
-    top:21px;
-    left:0;
+    top: 21px;
+    left: 0;
     font-family: 'dots_all_for_now_jlregular';
-    color:peru;
+    color: peru;
 }
 
-
-.dropdown-item, .dropdown-menu{
+.dropdown-item,
+.dropdown-menu {
     color: #CCC;
-   background-color:  rgba(50, 50, 50, 1);
+    background-color: rgba(50, 50, 50, 1);
 }
 
 .dropdown-item:hover {
@@ -168,12 +172,13 @@ marquee {
 
 #runner {
     position: absolute;
-    top:0;
-    left:275px;
+    top: 0;
+    left: 275px;
     width: 100%;
-    height:auto;
+    height: auto;
     border-right: 418px solid rgba(50, 50, 50, 1);
 }
+
 @media only screen and (max-width: 765px) {
     #runner {
         position: absolute;
@@ -187,7 +192,8 @@ marquee {
         font-size: 1.4em;
         top: 10px;
     }
-  }
+}
+
 
 /*------------------COURSE CONTENT---------------*/
 

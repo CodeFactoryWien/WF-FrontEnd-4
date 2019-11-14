@@ -128,7 +128,7 @@ const LANG_COURSE_DATA = [
       are mostly virtual. Our coding monkeys sometimes start randomly generating Shakespeare's complete
       works, this is when we know that they need a break.</p>
     `,
-        videoUrls: ["", "", ""], videoUrls: ["https://www.youtube.com/embed/5SD2j9k6E7c", "https://www.youtube.com/embed/2f-89z1zkGQ", "https://www.youtube.com/embed/iSmkqocn0oQ"],
+        videoUrls: ["", "", ""],videoUrls: ["https://www.youtube.com/embed/5SD2j9k6E7c", "https://www.youtube.com/embed/2f-89z1zkGQ", "https://www.youtube.com/embed/iSmkqocn0oQ"],
         courseSpaceInfo: `<p>The haskell course is held at our special facilities in space. Our space base alternates
       between orbiting the moon and mars and is reached with a special reusable rocket ship supplied personally
       by Elon Musk</p>
@@ -346,6 +346,7 @@ const HOME_CONTENT = [{
 const newslist = [{
         "id": 1,
         "name": "Java course",
+        "img": "java.jpg",
         "price": 1200,
         "rabattprice": 1000,
         "startdate": "05.12.2019",
@@ -358,6 +359,7 @@ const newslist = [{
     {
         "id": 2,
         "name": "Java course",
+        "img": "java.jpg",
         "price": 1200,
         "startdate": "05.12.2019",
         "shorttext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
@@ -370,6 +372,7 @@ const newslist = [{
     {
         "id": 3,
         "name": "Java course",
+        "img": "java.jpg",
         "price": 1200,
         "startdate": "05.12.2019",
         "shorttext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
@@ -382,6 +385,7 @@ const newslist = [{
     {
         "id": 4,
         "name": "Java course",
+        "img": "java.jpg",
         "price": 1200,
         "rabattprice": 1000,
         "startdate": "05.12.2019",
@@ -395,6 +399,7 @@ const newslist = [{
     {
         "id": 5,
         "name": "Java course",
+        "img": "java.jpg",
         "price": 1200,
         "rabattprice": 1000,
         "startdate": "05.12.2019",

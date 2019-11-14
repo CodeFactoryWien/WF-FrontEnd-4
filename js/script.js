@@ -20,8 +20,7 @@ class Home {
         return `
         <style>.col-12{height: 100vh}</style>
                         <div class="row" id="home-row">
-                            <div class="col-12 overflow-hidden">
-                            <img src="img/landing_narrow.jpg">
+                            <div class="col-12 overflow-hidden" id="landingimg">
                             </div>
                 </div>
         `
@@ -30,8 +29,9 @@ class Home {
 
 class News {
 
-    constructor(name, startdate, seats, seatstaken, shorttext, longtext, price) {
+    constructor(name,img, startdate, seats, seatstaken, shorttext, longtext, price) {
         this.name = name;
+        this.img = img;
         this.startdate = startdate;
         this.seats = seats;
         this.seatstaken = seatstaken;
@@ -48,7 +48,7 @@ class News {
                     ${this.name}
                 </div>
                 <div class="box">
-                    <img class="card-img" src="./img/java.jpg" alt="Card image">
+                    <img class="card-img" src="./img/${this.img}" alt="Card image">
                     <div class="middlebox">
                         <div class="card-body">
                             <ul class="list-group list-group-flush info">
@@ -213,6 +213,7 @@ class Courses {
 //-----------------------------------------------------------------------------------
 
 
+
 window.onload = function () {
 
     for (i in l) {
@@ -233,7 +234,7 @@ window.onload = function () {
     
     for (i in n) {
 
-        newsarr.push(new News(n[i].name, n[i].startdate, n[i].seats, n[i].seatstaken, n[i].shorttext, n[i].longtext, n[i].price));
+        newsarr.push(new News(n[i].name,n[i].img, n[i].startdate, n[i].seats, n[i].seatstaken, n[i].shorttext, n[i].longtext, n[i].price));
         
         
         $("#tab-news").append(`<div class="row">${newsarr[i].display()}</div>`);
@@ -258,6 +259,7 @@ window.onload = function () {
             pricehook[counter].firstElementChild.style.textDecoration = "line-through";
             pricehook[counter].appendChild(obj);
         }
+
         
         let button = document.getElementById(`button${n[i].id}`);
         button.addEventListener("click", function(){
