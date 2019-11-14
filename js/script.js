@@ -55,7 +55,7 @@ class News {
                         <div class="card-body">
                             <ul class="list-group list-group-flush info">
                                 <li class="list-group-item" style="${this.startdate ? "" : "display:none"}">Course start: ${this.startdate}</li>
-                                <li class="list-group-item">Seats left: ${this.seats-this.seatstaken} from ${this.seats}</li>
+                                <li class="list-group-item">Seats left: ${this.seats-this.seatstaken} / ${this.seats}</li>
                                 <li class="list-group-item">${this.shorttext}</li>
                                 <li style="display:none" class="list-group-item">${this.longtext}</li>
                             </ul>
