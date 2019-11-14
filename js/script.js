@@ -246,18 +246,30 @@ window.onload = function () {
         let infohook = document.querySelectorAll("ul.list-group.list-group-flush.info");
         
         
-        if (n[i].seats === n[i].seatstaken) {
-            infohook[counter].children[1].innerText = "Booked up"
+        
+        if (n[i].seats == "") {
+            
+            $(infohook[counter].children[1]).hide();
+            $(pricehook[counter].firstElementChild).hide();
+            
+        } else if (n[i].seats === n[i].seatstaken) {
+            
+            infohook[counter].children[1].innerText = "Booked up";
         }
         
-        if (n[i].hasOwnProperty("rabattprice")) {
+        if (n[i].rabattprice != "") {
             
             let obj = document.createElement("li");
             obj.classList.add("list-group-item");
-            obj.innerText = "Newprice: " + n[i].rabattprice + "€";
+            obj.innerText = "Discount price: " + n[i].rabattprice + "€";
             
             pricehook[counter].firstElementChild.style.textDecoration = "line-through";
             pricehook[counter].appendChild(obj);
+
+        } else if(n[i].rabattprice == "") {
+            let obj = document.createElement("li");
+            obj.classList.add("list-group-item");
+            obj.innerText = "";
         }
 
         
