@@ -29,8 +29,9 @@ class Home {
 
 class News {
 
-    constructor(name,img, startdate, seats, seatstaken, shorttext, longtext, price) {
+    constructor(name, category, img, startdate, seats, seatstaken, shorttext, longtext, price) {
         this.name = name;
+        this.category = category;
         this.img = img;
         this.startdate = startdate;
         this.seats = seats;
@@ -42,10 +43,11 @@ class News {
     }
     display() {
         return `
-            <div class="col-lg-10">
+            <div class="col-lg-10 mt-5">
             <div class="card">
-                <div class="card-header">
-                    ${this.name}
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h4>${this.name}</h4> 
+                    <h6>Category: <span class="h5">${this.category}</span></h6>
                 </div>
                 <div class="box">
                     <img class="card-img" src="./img/${this.img}" alt="Card image">
@@ -86,7 +88,7 @@ class Courses {
 
     constructor(img, name, blurb, technologies, text, videoUrls, courseSpaceInfo, teachers, news, offers, testimonials) {
         this.img = img,
-            this.name = name;
+        this.name = name;
         this.blurb = blurb;
         this.technologies = technologies;
         this.text = text;
@@ -234,7 +236,7 @@ window.onload = function () {
     
     for (i in n) {
 
-        newsarr.push(new News(n[i].name,n[i].img, n[i].startdate, n[i].seats, n[i].seatstaken, n[i].shorttext, n[i].longtext, n[i].price));
+        newsarr.push(new News(n[i].name, n[i].category, n[i].img, n[i].startdate, n[i].seats, n[i].seatstaken, n[i].shorttext, n[i].longtext, n[i].price));
         
         
         $("#tab-news").append(`<div class="row">${newsarr[i].display()}</div>`);
