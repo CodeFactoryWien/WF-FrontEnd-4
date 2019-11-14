@@ -44,8 +44,8 @@ class News {
     display() {
         return `
             <div class="col-lg-10 mt-5">
-            <div class="card">
-                <div class="card-header d-flex justify-content-between align-items-center">
+            <div class="card border border-secondary">
+                <div class="card-header d-flex justify-content-between align-items-center background-card">
                     <h4>${this.name}</h4> 
                     <h6>Category: <span class="h5">${this.category}</span></h6>
                 </div>
@@ -68,7 +68,7 @@ class News {
                         <a href="#!" id="button${n[i].id}" class="btn btn-primary button">Show More</a>
                     </div>
                 </div>
-                <div class="card-footer">
+                <div class="card-footer background-card">
                 </div>
             </div>
         </div>
