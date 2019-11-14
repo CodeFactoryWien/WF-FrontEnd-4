@@ -18,9 +18,9 @@ class Home {
     }
     display() {
         return `
+        <style>.col-12{height: 100vh}</style>
                         <div class="row" id="home-row">
-                            <div class="col-12">
-                            <img src="img/landing_narrow.jpg">
+                            <div class="col-12 overflow-hidden" id="landingimg">
                             </div>
                 </div>
         `
@@ -29,8 +29,9 @@ class Home {
 
 class News {
 
-    constructor(name, startdate, seats, seatstaken, shorttext, longtext, price) {
+    constructor(name,img, startdate, seats, seatstaken, shorttext, longtext, price) {
         this.name = name;
+        this.img = img;
         this.startdate = startdate;
         this.seats = seats;
         this.seatstaken = seatstaken;
@@ -47,7 +48,7 @@ class News {
                     ${this.name}
                 </div>
                 <div class="box">
-                    <img class="card-img" src="./img/java.jpg" alt="Card image">
+                    <img class="card-img" src="./img/${this.img}" alt="Card image">
                     <div class="middlebox">
                         <div class="card-body">
                             <ul class="list-group list-group-flush info">
@@ -62,7 +63,7 @@ class News {
                         <ul class="list-group list-group-flush price">
                             <li class="list-group-item">Price: ${this.price}€</li>
                         </ul>
-                        <a href="#!" id="button${n[i].id}" class="btn btn-primary button">Go somewhere</a>
+                        <a href="#!" id="button${n[i].id}" class="btn btn-primary button">Show More</a>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -233,7 +234,7 @@ window.onload = function () {
     
     for (i in n) {
 
-        newsarr.push(new News(n[i].name, n[i].startdate, n[i].seats, n[i].seatstaken, n[i].shorttext, n[i].longtext, n[i].price));
+        newsarr.push(new News(n[i].name,n[i].img, n[i].startdate, n[i].seats, n[i].seatstaken, n[i].shorttext, n[i].longtext, n[i].price));
         
         
         $("#tab-news").append(`<div class="row">${newsarr[i].display()}</div>`);
@@ -245,18 +246,30 @@ window.onload = function () {
         let infohook = document.querySelectorAll("ul.list-group.list-group-flush.info");
         
         
-        if (n[i].seats === n[i].seatstaken) {
-            infohook[counter].children[1].innerText = "Booked up"
+        
+        if (n[i].seats == "") {
+            
+            $(infohook[counter].children[1]).hide();
+            $(pricehook[counter].firstElementChild).hide();
+            
+        } else if (n[i].seats === n[i].seatstaken) {
+            
+            infohook[counter].children[1].innerText = "Booked up";
         }
         
-        if (n[i].hasOwnProperty("rabattprice")) {
+        if (n[i].rabattprice != "") {
             
             let obj = document.createElement("li");
             obj.classList.add("list-group-item");
-            obj.innerText = "Newprice: " + n[i].rabattprice + "€";
+            obj.innerText = "Discount price: " + n[i].rabattprice + "€";
             
             pricehook[counter].firstElementChild.style.textDecoration = "line-through";
             pricehook[counter].appendChild(obj);
+
+        } else if(n[i].rabattprice == "") {
+            let obj = document.createElement("li");
+            obj.classList.add("list-group-item");
+            obj.innerText = "";
         }
 
         // Button Event Toggle
@@ -266,10 +279,20 @@ window.onload = function () {
             readMore(event)});
 
             function readMore(event) {
+               
+               
                 let texttoggle = event.srcElement.parentElement.parentElement.children[1].querySelector("ul").children;
                 $(texttoggle[2]).toggle("slow");
                 $(texttoggle[3]).toggle("slow");
-        }
+
+                if(event.target.innerText == "Show More") {
+
+                    event.target.innerText = "Show Less"
+                    
+                } else {
+                    event.target.innerText = "Show More"
+                }
+               }
 
         counter++;
 
@@ -302,3 +325,16 @@ function postage(news) {
     }
 
 }
+
+// Newsletter ----
+
+var paragraph = document.getElementById("newsletter");
+
+
+
+function news() { 
+    var val_news = Math.round(Math.random() * 10);
+    console.log(newsletter.news[0]);
+    paragraph.textContent = newsletter.news[val_news];
+}
+news();
