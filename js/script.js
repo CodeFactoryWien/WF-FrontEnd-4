@@ -272,6 +272,7 @@ window.onload = function () {
             obj.innerText = "";
         }
 
+        // Button Event Toggle
         
         let button = document.getElementById(`button${n[i].id}`);
         button.addEventListener("click", function(){
