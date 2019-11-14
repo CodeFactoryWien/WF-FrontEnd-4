@@ -163,7 +163,7 @@ class Courses {
                 <hr>
                 <div class="offers-box row justify-center">
                     ${ this.offers.map(o => `
-                    <div class="offers-item md-3 sm-6">
+                    <div class="offers-item md-3 sm-12">
                         <div class="o_model" id="button">${o.name}</div>
                             <div id="slider">
                             <div class="o_price">${o.price} EUR</div>
