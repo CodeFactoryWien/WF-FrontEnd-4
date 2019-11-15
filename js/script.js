@@ -31,7 +31,7 @@ class Home {
         return `
         <!-- <style>.col-12{height: 100vh} .list-group-item, .li {display:block!important;}</style> -->
 <div class="row" id="home-row">
-    <div class="col-12 overflow-hidden" id="landingimg">
+    <div class="col-12 col-12-home overflow-hidden" id="landingimg">
 
 
             <div class="card_container container-fluid">
@@ -40,9 +40,9 @@ class Home {
                         <div class="hexagon">
                         <img class="hex-img" src="./img/hexagon_glass.png" alt="Card image">
                             <ul class="list-group list-group-flush info">
-                                <li class="list-group-item">COURSE START<p id="course_start0"></p></li>
-                                <li class="list-group-item">${u[0].seats}<br>SEATS LEFT</li>
-                                <li class="list-group-item">${u[0].name}</li>
+                                <li class="list-group-item list-group-item-home">COURSE START<p id="course_start0"></p></li>
+                                <li class="list-group-item list-group-item-home"></li>
+                                <li class="list-group-item list-group-item-home">${u[0].name}</li>
                             </ul>
                         </div>
                     </div>
@@ -50,9 +50,9 @@ class Home {
                         <div class="hexagon">
                         <img class="hex-img" src="./img/hexagon_glass.png" alt="Card image">
                             <ul class="list-group">
-                                <li class="list-group-item">COURSE START<p id="course_start1"></p></li>
-                                <li class="list-group-item">${u[1].seats}<br>SEATS LEFT</li>
-                                <li class="list-group-item">${u[1].name}</li>
+                                <li class="list-group-item list-group-item-home">COURSE START<p id="course_start1"></p></li>
+                                <li class="list-group-item list-group-item-home"></li>
+                                <li class="list-group-item list-group-item-home">${u[1].name}</li>
                             </ul>
                         </div>
                     </div>
@@ -62,9 +62,9 @@ class Home {
                         <div class="hexagon">
                         <img class="hex-img" src="./img/hexagon_glass.png" alt="Card image">
                             <ul class="list-group list-group-flush info">
-                                <li class="list-group-item">COURSE START<p id="course_start2"></p></li>
-                                <li class="list-group-item">${u[2].seats}<br>SEATS LEFT</li>
-                                <li class="list-group-item">${u[2].name}</li>
+                                <li class="list-group-item list-group-item-home">COURSE START<p id="course_start2"></p></li>
+                                <li class="list-group-item list-group-item-home"></li>
+                                <li class="list-group-item list-group-item-home">${u[2].name}</li>
                             </ul>
                         </div>
                     </div>
@@ -72,9 +72,8 @@ class Home {
                         <div class="hexagon">
                         <img class="hex-img" src="./img/hexagon_glass.png" alt="Card image">
                             <ul class="list-group list-group-flush info">
-                                <li class="list-group-item">COURSE START<p id="course_start3"></p></li>
-                                <li class="list-group-item">${u[3].seats}<br>SEATS LEFT</li>
-                                <li class="list-group-item">${u[3].name}</li>
+                                <li class="list-group-item list-group-item-home">COURSE START<p id="course_start3"></p></li>
+                                <li class="list-group-item list-group-item-home">${u[3].name}</li>
                             </ul>
                         </div>
                     </div>
@@ -113,16 +112,21 @@ class News {
                     <div class="middlebox">
                         <div class="card-body">
                             <ul class="list-group list-group-flush info">
-                                <li class="list-group-item" style="${this.startdate ? "" : "display:none"}">Course start: ${this.startdate}</li>
-                                <li class="list-group-item">Seats left: ${this.seats-this.seatstaken} / ${this.seats}</li>
-                                <li class="list-group-item">${this.shorttext}</li>
+                                <li class="list-group-item" style="${this.startdate ? "" : "display:none"}">
+                                  <p class="news-text">Course start: ${this.startdate}</p></li>
+                                <li class="list-group-item" style="${this.seats ? "" : "display:none"}">
+                                  <p class="news-text">${
+                                    this.seats-this.seatstaken == 0 ? "Booked Up" :
+                                      `Seats left: ${this.seats-this.seatstaken} / ${this.seats}`
+                                  }</p></li>
+                                <li class="list-group-item"><p class=news-text>${this.shorttext}</p></li>
                                 <li style="display:none" class="list-group-item">${this.longtext}</li>
                             </ul>
                         </div>
                     </div>
                     <div class="rightbox">
                         <ul class="list-group list-group-flush price">
-                            <li class="list-group-item">Price: ${this.price}€</li>
+                            <li class="list-group-item"><p class="news-text">Price: ${this.price}€</p></li>
                         </ul>
                         <a href="#!" id="button${n[i].id}" class="btn btn-primary button">Show More</a>
                     </div>
@@ -321,7 +325,7 @@ window.onload = function () {
             
             let obj = document.createElement("li");
             obj.classList.add("list-group-item");
-            obj.innerText = "Discount price: " + n[i].rabattprice + "€";
+            obj.innerHTML = "<p class=news-text>" + "Discount price: " + n[i].rabattprice + "€" + "</p>"; 
             
             pricehook[counter].firstElementChild.style.textDecoration = "line-through";
             pricehook[counter].appendChild(obj);

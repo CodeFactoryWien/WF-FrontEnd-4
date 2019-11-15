@@ -341,3 +341,11 @@ td {
 .active {
     display: block;
 }
+
+.list-group-item-home {
+  display: block;
+}
+
+.col-12-home {
+  height: 100vh;
+}
