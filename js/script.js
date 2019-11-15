@@ -120,7 +120,7 @@ class News {
                                       `Seats left: ${this.seats-this.seatstaken} / ${this.seats}`
                                   }</p></li>
                                 <li class="list-group-item"><p class=news-text>${this.shorttext}</p></li>
-                                <li style="display:none" class="list-group-item">${this.longtext}</li>
+                                <li style="display:none" class="list-group-item news-longtext">${this.longtext}</li>
                             </ul>
                         </div>
                     </div>

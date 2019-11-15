@@ -36,3 +36,8 @@ body {
 .middlebox .list-group {
   padding-top: 1rem;
 }
+
+.news-longtext {
+  font-size: 1.3rem;
+  line-height: 2.1rem;
+}
