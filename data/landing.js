@@ -30,7 +30,7 @@ const LANDING_CONTENT = [{
 {
     img: "./img/landing_narrow.jpg",
     name: "FORTRAN",
-    date: `Nov 12, 2019 08:07:45`,
+    date: `Nov 17, 2019 08:07:45`,
     technologies: ["", "", ""],
     seats: `43`,
     videoUrls: ["", "", ""],
