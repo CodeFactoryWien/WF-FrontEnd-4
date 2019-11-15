@@ -1,28 +1,87 @@
 objs = [];
 homearr = [];
 newsarr = [];
+landingarr =[];
 var counter = 0
-
 
 
 const x = LANG_COURSE_DATA;
 const l = HOME_CONTENT;
+const u = LANDING_CONTENT;
 const n = newslist;
+
 
 
 class Home {
 
-    constructor(img, name) {
+    constructor(img, name, blurb, text, technologies, videoUrls, courseSpaceInfo, teachers, news, offers, testimonials) {
         this.img = img;
         this.name = name;
+        this.blurb = blurb;
+        this.technologies = technologies;
+        this.text = text;
+        this.videoUrls = videoUrls;
+        this.courseSpaceInfo = courseSpaceInfo;
+        this.teachers = teachers;
+        this.news = news;
+        this.offers = offers;
+        this.testimonials = testimonials;
     }
     display() {
         return `
-        <style>.col-12{height: 100vh}</style>
-                        <div class="row" id="home-row">
-                            <div class="col-12 overflow-hidden" id="landingimg">
-                            </div>
+        <style>.col-12{height: 100vh} .list-group-item, .li {display:block!important;}</style>
+<div class="row" id="home-row">
+    <div class="col-12 overflow-hidden" id="landingimg">
+
+
+            <div class="card_container container-fluid">
+                <div class="row" id="row_left">
+                    <div class="blog-output col-3 md-4">
+                        <div class="hexagon">
+                        <img class="hex-img" src="./img/hexagon_glass.png" alt="Card image">
+                            <ul class="list-group list-group-flush info">
+                                <li class="list-group-item">COURSE START<p id="course_start0"></p></li>
+                                <li class="list-group-item">${u[0].seats}<br>SEATS LEFT</li>
+                                <li class="list-group-item">${u[0].name}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="blog-output col-3 md-4">
+                        <div class="hexagon">
+                        <img class="hex-img" src="./img/hexagon_glass.png" alt="Card image">
+                            <ul class="list-group">
+                                <li class="list-group-item">COURSE START<p id="course_start1"></p></li>
+                                <li class="list-group-item">${u[1].seats}<br>SEATS LEFT</li>
+                                <li class="list-group-item">${u[1].name}</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+                <div class="row" id="row_right">
+                    <div class="blog-output col-3 md-4">
+                        <div class="hexagon">
+                        <img class="hex-img" src="./img/hexagon_glass.png" alt="Card image">
+                            <ul class="list-group list-group-flush info">
+                                <li class="list-group-item">COURSE START<p id="course_start2"></p></li>
+                                <li class="list-group-item">${u[2].seats}<br>SEATS LEFT</li>
+                                <li class="list-group-item">${u[2].name}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="blog-output col-3 md-4">
+                        <div class="hexagon">
+                        <img class="hex-img" src="./img/hexagon_glass.png" alt="Card image">
+                            <ul class="list-group list-group-flush info">
+                                <li class="list-group-item">COURSE START<p id="course_start3"></p></li>
+                                <li class="list-group-item">${u[3].seats}<br>SEATS LEFT</li>
+                                <li class="list-group-item">${u[3].name}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+</div>
         `
     }
 }
@@ -86,8 +145,8 @@ class News {
 class Courses {
 
     constructor(img, name, blurb, technologies, text, videoUrls, courseSpaceInfo, teachers, news, offers, testimonials) {
-        this.img = img,
-            this.name = name;
+        this.img = img;
+    	this.name = name;
         this.blurb = blurb;
         this.technologies = technologies;
         this.text = text;
@@ -329,13 +388,141 @@ function postage(news) {
 
 // Newsletter ----
 
-var paragraph = document.getElementById("newsletter");
+let paragraph = document.getElementById("newsletter");
 
 
 
 function news() { 
-    var val_news = Math.round(Math.random() * 10);
-    console.log(newsletter.news[0]);
+    let val_news = Math.round(Math.random() * 10);
+    //console.log(newsletter.news[0]);
     paragraph.textContent = newsletter.news[val_news];
 }
 news();
+
+
+
+//Countdown ----
+class Landing {
+
+    constructor(img, name, blurb, technologies, text, videoUrls, courseSpaceInfo, teachers, news, offers, testimonials) {
+        this.img = img,
+            this.name = name;
+        this.blurb = blurb;
+        this.technologies = technologies;
+        this.text = text;
+        this.videoUrls = videoUrls;
+        this.courseSpaceInfo = courseSpaceInfo;
+    }
+}
+
+
+for(i in u){
+    let countDownDate = new Date(LANDING_CONTENT[i].date).getTime();
+    console.log(LANDING_CONTENT[i].date);
+
+
+    let now = new Date().getTime();
+    let distance = countDownDate - now;
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        (function(i) {
+            let cnt = setInterval(function() {
+
+                document.getElementById(`course_start${i}`).innerHTML = days + "d " + hours + "h " +
+                    minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(cnt);
+                document.getElementById(`course_start${i}`).innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    })(i);
+}
+
+
+
+    let cnt1 = setInterval(function() {
+        let countDownDate1 = new Date(LANDING_CONTENT[0].date).getTime();
+        let now = new Date().getTime();
+        let distance = countDownDate1 - now;
+    
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+        document.getElementById(`course_start${0}`).innerHTML = days + "d " + hours + "h " +
+            minutes + "m " + seconds + "s ";
+    
+        if (distance < 0) {
+            clearInterval(cnt1);
+            document.getElementById(`course_start${0}`).innerHTML = "STARTED";
+        }
+   
+    }, 1000);
+
+    let cnt2 = setInterval(function() {
+        let now = new Date().getTime();
+        let countDownDate2 = new Date(LANDING_CONTENT[1].date).getTime();
+
+        let distance = countDownDate2 - now;
+    
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+        document.getElementById(`course_start${1}`).innerHTML = days + "d " + hours + "h " +
+            minutes + "m " + seconds + "s ";
+    
+        if (distance < 0) {
+            clearInterval(cnt2);
+            document.getElementById(`course_start${1}`).innerHTML = "STARTED";
+        }
+   
+    }, 1000);
+
+    let cnt3 = setInterval(function() {
+        let now = new Date().getTime();
+        let countDownDate3 = new Date(LANDING_CONTENT[2].date).getTime();
+
+        let distance = countDownDate3 - now;
+    
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+        document.getElementById(`course_start${2}`).innerHTML = days + "d " + hours + "h " +
+            minutes + "m " + seconds + "s ";
+    
+        if (distance < 0) {
+            clearInterval(cnt3);
+            document.getElementById(`course_start${2}`).innerHTML = "STARTED";
+        }
+   
+    }, 10);
+
+    let cnt4 = setInterval(function() {
+        let now = new Date().getTime();
+        let countDownDate4 = new Date(LANDING_CONTENT[3].date).getTime();
+        let distance = countDownDate4 - now;
+    
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+        document.getElementById(`course_start${3}`).innerHTML = days + "d " + hours + "h " +
+            minutes + "m " + seconds + "s ";
+    
+        if (distance < 0) {
+            clearInterval(cnt4);
+            document.getElementById(`course_start${3}`).innerHTML = "STARTED";
+        }
+   
+    }, 1000);

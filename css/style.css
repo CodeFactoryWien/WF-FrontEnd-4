@@ -15,7 +15,7 @@ header {
 
 #landingimg {
     background-position-y: 50%;
-    background-image: url("../img/landing_narrow.png");
+    background-image: url("../img/landing_joke.jpg");
 }
 
 .col-12 {
@@ -72,6 +72,9 @@ header {
     margin: 0;
 }
 
+#visi {
+    display: visible!important;
+}
 
 /*------NAVBAR-------*/
 
@@ -83,10 +86,12 @@ header {
     font-size: 1.2em;
     position: fixed;
     width: 100%;
+    pointer-events:  auto;
 }
 
 .nav-item {
     color: peru;
+    pointer-events:  auto;              /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<PINTER EVENT<<<<<<<<<*/
 }
 
 button,
