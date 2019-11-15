@@ -41,3 +41,19 @@ body {
   font-size: 1.3rem;
   line-height: 2.1rem;
 }
+
+.langcourse-title {
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
+ 
+.langcourse-title img {
+  position: inherit !important;
+  margin-top: 0 !important;
+  margin-left: 2rem !important;
+}
+
+.langtitle {
+  margin-bottom: 0;
+  line-height: 5rem;
+}

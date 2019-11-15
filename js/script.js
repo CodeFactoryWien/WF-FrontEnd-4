@@ -167,7 +167,10 @@ class Courses {
 
             <script>console.log("Hello")</script>
             <div class="course-bg container-fluid p-0">
-            <div class=title>${this.name}<img src="img/${this.img}.png" id="${this.img}"></div>
+            <div class="title langcourse-title">
+              <div class=langtitle>${this.name}</div>
+              <img src="img/${this.img}.png" id="${this.img}">
+            </div>
             <div class=subtitle>
                 ${this.technologies.join(" ++ ")}</div>
             <div class=content-with-sidebar>
