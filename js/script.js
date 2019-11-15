@@ -29,7 +29,7 @@ class Home {
     }
     display() {
         return `
-        <style>.col-12{height: 100vh} .list-group-item, .li {display:block!important;}</style>
+        <!-- <style>.col-12{height: 100vh} .list-group-item, .li {display:block!important;}</style> -->
 <div class="row" id="home-row">
     <div class="col-12 overflow-hidden" id="landingimg">
 
